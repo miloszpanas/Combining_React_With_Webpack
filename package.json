@@ -11,16 +11,23 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "browser-sync": "^2.24.5",
     "css-loader": "^1.0.0",
+    "node-sass": "^4.9.2",
+    "npm-run-all": "^4.1.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "run-all": "^1.0.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.16.0",
     "webpack-cli": "^3.0.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode=development"
+    "start": "webpack --mode=development",
+    "live": "node_modules/.bin/browser-sync start --server --files css/*.css *.html js/*.js *.js",
+    "sass": "node-sass --output-style nested --source-map true -o css sass --watch",
+    "dev": "npm-run-all -p sass live"
   },
   "keywords": [
     "webpack",
