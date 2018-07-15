@@ -25,7 +25,6 @@ class App extends React.Component {
     render() {
         return (
             <div className={style.TodoApp}>
-            asdasdas
                 <Title content="ReactWebpackApp" tasks={this.state.data.length} />
             </div>
         );
