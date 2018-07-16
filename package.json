@@ -24,7 +24,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode=development",
+    "start": "webpack --env development",
+    "build": "webpack --env production",
     "live": "node_modules/.bin/browser-sync start --server --files css/*.css *.html js/*.js *.js",
     "sass": "node-sass --output-style nested --source-map true -o css sass --watch",
     "dev": "npm-run-all -p sass live"
