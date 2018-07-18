@@ -1,7 +1,9 @@
 import React from 'react';
 
 const TodoList = ({dataList, removeData}) => (
-    <div>({dataList}) ({removeData})</div>
+    <ul>
+        {dataList.map(item => <li key={item.id} onClick={() => removeData(item.id)}>{item.text}</li>)}
+    </ul>
 );
 
 export default TodoList;
